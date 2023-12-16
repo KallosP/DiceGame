@@ -41,12 +41,15 @@ public class MainGame{
 		System.out.println(msg);
 		tempPlayerScore += scoreAmt;
 	}
-	
+
+
 	//sets dice kept to true
 	public void setDiceWasKept() {
 		diceWasKept = true;
 	}
-	
+
+
+	// TODO: SIMPLIFY
 	//Determines type of kind and displays according message, point, and counter operations
 	public void ofKindPath(ArrayList<Integer> dieVals, int[] ctrs, int ofKindType) {
 		
@@ -188,7 +191,8 @@ public class MainGame{
 		}
 		
 	}
-	
+
+	// FIXME: SIMPLIFY
 	//searches for any other combo type (currently only checks for straight and three pairs)
 	public void otherCombo(ArrayList<Integer> dieVals, int[] ctrs, int playerScore) {
 		System.out.println("\nSearching...\n");
@@ -249,22 +253,22 @@ public class MainGame{
 			roll = scnr.next().charAt(0);
 		}
 	}
-	
+	// TEST
 	//rolls 6 random dice values, calls the assignCtrs() method, and checks for a scratched turn
 	public void rollDice() {
 		
 		//COMMENT OUT IF BUG TESTING
-		for(int i = 0; i < 6; ++i) {
-			listOfdieVals.add(die.roll(MIN, MAX));
-		}
+//		for(int i = 0; i < 6; ++i) {
+//			listOfdieVals.add(die.roll(MIN, MAX));
+//		}
 		
 		//BUG TESTING
-		/*listOfdieVals.add(1);
 		listOfdieVals.add(1);
 		listOfdieVals.add(1);
 		listOfdieVals.add(1);
 		listOfdieVals.add(1);
-		listOfdieVals.add(2);*/
+		listOfdieVals.add(1);
+		listOfdieVals.add(2);
 		
 		assignCtrs(listOfdieVals);
 		

@@ -4,7 +4,7 @@ public class Main{
 	
 	public static void main(String[] args) {
 		Scanner scnr = new Scanner(System.in);
-		UserChoices userMC = new UserChoices();		
+		UserChoices userMC = new UserChoices();
 		Util util = new Util();
 		
 		util.printTitleAndWelcome();
